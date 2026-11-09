@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دعوة خاصة | إدارة البيانات وحوكمتها</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF4F5;--card:#fff;--ink:#12343C;--mute:#5A727A;--line:#CFE0E3;--lock:#DDE8EA;--c1:#D2B06A;--c2:#5BA6B0;--c3:#9CCFC8;--c4:#86BFC6;--accent:#1F5F6B;--onaccent:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E2227;--card:#16333A;--ink:#EAF4F5;--mute:#A8C0C5;--line:#2B4C54;--lock:#244148;--accent:#D2B06A;--onaccent:#0E2227}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:Tajawal,"Segoe UI",Tahoma,sans-serif;min-height:100vh;display:flex;justify-content:center;padding:20px 14px 40px;align-items:center}
+.wrap{width:100%;max-width:560px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+.hdr{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--mute);margin-bottom:18px;gap:10px}
+.hdr b{color:var(--ink);font-weight:700}
+h1{font-size:30px;line-height:1.3;margin:6px 0 4px;font-weight:800}
+h2{font-size:17px;margin:0 0 6px;font-weight:700}
+p{margin:0;line-height:1.8;color:var(--mute)}
+.en{direction:ltr;font-weight:500;color:var(--mute);font-size:15px;margin-top:2px;text-align:center}
+.center{text-align:center}.logo{display:block;margin:0 auto 14px;width:112px;height:auto;border-radius:16px;background:#EDF3F4}
+input{width:100%;font:inherit;font-size:18px;padding:14px 16px;border-radius:14px;border:2px solid var(--line);background:var(--bg);color:var(--ink);margin:16px 0 12px;text-align:center}
+input:focus-visible,button:focus-visible{outline:3px solid var(--c4);outline-offset:2px}
+.btn{font:inherit;font-weight:700;font-size:17px;border:0;border-radius:14px;padding:13px 22px;background:var(--accent);color:var(--onaccent);cursor:pointer;width:100%}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.dots{display:flex;gap:6px;justify-content:center;margin-bottom:10px}
+.dots i{width:34px;height:5px;border-radius:3px}
+.hide{display:none!important}a.btn{display:block;text-align:center;text-decoration:none}.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--accent);margin-top:10px}
+.meter{display:flex;align-items:center;gap:12px;margin:14px 0 4px}
+.track{flex:1;height:12px;background:var(--lock);border-radius:8px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3),var(--c4));transition:width .7s ease}
+.pct{font-weight:800;font-size:22px;min-width:56px;text-align:left;direction:ltr}
+.chart{display:flex;gap:12px;align-items:flex-end;height:230px;margin:18px 0 4px;border-bottom:2px solid var(--line);padding:0 4px}
+.col{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;background:none;border:0;padding:0;cursor:pointer;font:inherit;color:var(--ink)}
+.val{text-align:center;font-weight:700;font-size:13px;min-height:34px;line-height:1.3;padding-bottom:4px;opacity:0;transition:opacity .4s .4s}
+.bar{border-radius:12px 12px 0 0;height:22%;background:var(--lock);display:flex;align-items:center;justify-content:center;font-size:26px;transition:height .8s cubic-bezier(.2,.9,.3,1.1),background .4s;color:var(--mute)}
+.col.on .bar{color:#0F2E35}
+.col.on .val{opacity:1}
+.col:not(.on) .bar{animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{height:27%}}
+@media (prefers-reduced-motion:reduce){.col:not(.on) .bar{animation:none}.bar,.fill{transition:none}}
+.names{display:flex;gap:12px;padding:8px 4px 0;font-size:13px;font-weight:700}
+.names span{flex:1;text-align:center}
+.panel{margin-top:16px;border-radius:16px;padding:16px 18px;background:var(--bg);border:1px dashed var(--line);min-height:84px}
+.panel strong{font-size:20px;display:block;color:var(--ink);margin-bottom:2px}
+.final{margin-top:16px;text-align:center;border-radius:18px;padding:20px;background:linear-gradient(135deg,rgba(210,176,106,.25),rgba(91,166,176,.25))}
+.final .big{font-size:44px;font-weight:800;line-height:1.1;direction:ltr}
+.team{margin-top:18px;font-size:12.5px;text-align:center;line-height:1.9;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section id="s1" class="card center">
+  <img class="logo" alt="شعار جامعة أم القرى - قسم علم البيانات" src="data:image/jpeg;base64,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"><div class="dots"><i style="background:var(--c1)"></i><i style="background:var(--c2)"></i><i style="background:var(--c3)"></i><i style="background:var(--c4)"></i></div>
+  <p>كلية الحاسبات · جامعة أم القرى · قسم علم البيانات</p>
+  <h1>دعوة خاصة</h1>
+  <p>قبل أن نفتح لكِ لوحة المؤشرات، كيف نناديكِ؟</p>
+  <input id="nm" type="text" maxlength="40" placeholder="اكتبي اسمك هنا" autocomplete="name" aria-label="اسمك">
+  <button class="btn" id="go" disabled>افتحي لوحة الدعوة</button>
+</section>
+
+<section id="s2" class="hide">
+  <div class="card">
+    <div class="hdr"><span>لوحة المؤشر الوطني للبيانات</span><b id="hi"></b></div>
+    <h2>اضغطي على الأعمدة لتكشفي تفاصيل دعوتك</h2>
+    <div class="meter"><div class="track"><div class="fill" id="fill"></div></div><div class="pct" id="pct">0%</div></div>
+    <p style="font-size:13px">مؤشر حضورك</p>
+
+    <div class="chart" id="chart">
+      <button class="col" data-i="0"><div class="val"></div><div class="bar" style="--c:var(--c1)">📅</div></button>
+      <button class="col" data-i="1"><div class="val"></div><div class="bar" style="--c:var(--c2)">🕘</div></button>
+      <button class="col" data-i="2"><div class="val"></div><div class="bar" style="--c:var(--c3)">📍</div></button>
+      <button class="col" data-i="3"><div class="val"></div><div class="bar" style="--c:var(--c4)">✉️</div></button>
+    </div>
+    <div class="names"><span>التاريخ</span><span>الوقت</span><span>المكان</span><span>أنتِ مدعوة</span></div>
+
+    <div class="panel" id="panel"><p>كل عمود مقفل يخفي معلومة. اضغطي عليه وشاهديه يرتفع.</p></div>
+
+    <div class="final hide" id="final">
+      <p>اكتملت اللوحة</p>
+      <div class="big">100%</div>
+      <h2 id="fin" style="margin-top:6px"></h2>
+      <p>أنتِ مدعوة لحضور معرض مشاريع</p>
+      <h2 style="margin-top:12px">إدارة البيانات وحوكمتها</h2>
+      <div class="en">Data Management &amp; Governance</div>
+      <p style="margin-top:6px">في مجال ذكاء الأعمال وتحليلها، ضمن 14 مجالاً من مجالات المؤشر الوطني للبيانات (سدايا)</p><p style="margin-top:8px;font-size:14px">يتضمن المعرض: بوسترات توعوية، التعريف بدور البيانات في دعم التنمية، عرض مشاريع مبتكرة، ولقاءات مع الطالبات لمناقشة مشاريعهن.</p><p style="margin-top:8px;font-size:14px">يسعدنا ويشرفنا حضورك.</p>
+      <button class="btn" id="ok" style="margin-top:16px">أؤكد حضوري</button><a class="btn alt" id="cal" target="_blank" rel="noopener">📅 أضف للتقويم</a>
+    </div>
+  </div>
+  <div class="team">نتطلع إلى حضورك، شريك النجاح نادي الحاسبات<br>فريق BIA-1: إبداع بتاوي · ميار معتوق · يمنى قراشع · ريفان النباتي · رناد عبدالعزيز</div>
+</section>
+</div>
+
+<script>
+var name="",seen=[false,false,false,false];
+var $=function(i){return document.getElementById(i)};
+var nm=$("nm"),go=$("go");
+nm.addEventListener("input",function(){go.disabled=!nm.value.trim()});
+nm.addEventListener("keydown",function(e){if(e.key==="Enter"&&!go.disabled)start()});
+go.addEventListener("click",start);
+function start(){
+  name=nm.value.trim();
+  $("s1").classList.add("hide");$("s2").classList.remove("hide");
+  $("hi").textContent="أهلاً "+name;
+  window.scrollTo(0,0);
+}
+var items=[
+ {h:55,t:"الأربعاء ١١ نوفمبر ٢٠٢٦",d:"سجّلي الموعد في تقويمك من الزر أسفل اللوحة."},
+ {h:78,t:"٩:٠٠ ص – ٢:٠٠ م",d:"تقدرين تزورينا في أي وقت خلال هذه الفترة."},
+ {h:62,t:"بهو قاعة الجوهرة",d:"جامعة أم القرى – الزاهر."},
+ {h:95,t:"",d:"لحضور معرض مشاريع إدارة البيانات وحوكمتها في مجال ذكاء الأعمال وتحليلها."}
+];
+var cols=document.querySelectorAll(".col");
+cols.forEach(function(c){
+  c.addEventListener("click",function(){
+    var i=+c.dataset.i,it=items[i];
+    var bar=c.querySelector(".bar");
+    if(!seen[i]){
+      seen[i]=true;c.classList.add("on");
+      bar.style.height=it.h+"%";bar.style.background=getComputedStyle(bar).getPropertyValue("--c");
+      c.querySelector(".val").textContent=i===3?name:it.t;
+      update();
+    }
+    var p=$("panel");p.innerHTML="";
+    var s=document.createElement("strong");s.textContent=i===3?name+"، أنتِ مدعوة":it.t;
+    var q=document.createElement("p");q.textContent=it.d;
+    p.appendChild(s);p.appendChild(q);
+  });
+});
+function update(){
+  var n=seen.filter(Boolean).length,v=n*25;
+  $("fill").style.width=v+"%";$("pct").textContent=v+"%";
+  if(n===4){
+    $("fin").textContent=name+"، مؤشر حضورك 100%";
+    setTimeout(function(){$("final").classList.remove("hide");$("final").scrollIntoView({behavior:"smooth",block:"center"})},700);
+  }
+}
+$("cal").href="https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("معرض مشاريع إدارة البيانات وحوكمتها")+"&dates=20261111T090000/20261111T140000&ctz=Asia/Riyadh&location="+encodeURIComponent("بهو قاعة الجوهرة، جامعة أم القرى – الزاهر")+"&details="+encodeURIComponent("معرض مشاريع قسم علم البيانات: إدارة البيانات وحوكمتها. مجال ذكاء الأعمال وتحليلها.");
+$("ok").addEventListener("click",function(){this.textContent="تم تأكيد حضورك ✓";this.disabled=true});
+</script>
+</body>
+</html>
